@@ -35,6 +35,8 @@ function playRound(playerSelection) {
     if (player == 'Scissors'  && computer == 'Rock') {
         return("You lose! Rock beats Scissors!");
         }
+    else
+        return("Invalid input! please select Rock, Paper, or Scissors")
     }
 
     function playGame() {
