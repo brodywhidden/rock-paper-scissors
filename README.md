@@ -1,0 +1,1 @@
+A simple JavaScript Rock Paper Scissors game for The Odin Project. Not exceptionally elegant, in particular I imagine there is a far more clean and efficient way to go about keeping a tally of the score. It's an eyesore, admittedly. When I come back later on to add a GUI, I'll be sure to clean it up.
