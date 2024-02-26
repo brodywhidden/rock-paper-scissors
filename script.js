@@ -39,5 +39,13 @@ function playRound(playerSelection) {
 
     function playGame() {
         const Game = prompt("Rock, Paper, Scissors!");
-        console.log(playRound(Game))
+        console.log(playRound(Game));
+        const Game2 = prompt("Round two!");
+        console.log(playRound(Game2));
+        const Game3 = prompt("Round three!");
+        console.log(playRound(Game3));
+        const Game4 = prompt("Round four!");
+        console.log(playRound(Game4));
+        const Game5 = prompt("Final round!");
+        console.log(playRound(Game5));
     }
