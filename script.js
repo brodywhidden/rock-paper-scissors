@@ -36,18 +36,48 @@ function playRound(playerSelection) {
         return("You lose! Rock beats Scissors!");
         }
     else
-        return("Invalid input! please select Rock, Paper, or Scissors")
+        return("Invalid input! please select Rock, Paper, or Scissors (case-insensitive)")
     }
 
     function playGame() {
+        let playerScore = 0
+        let computerScore = 0
         const Game = prompt("Rock, Paper, Scissors!");
-        console.log(playRound(Game));
+        let result = (playRound(Game));
+            console.log(result)
+                if (/You win!/.test(result)) {++playerScore};
+                if (/You lose!/.test(result)) {++computerScore};
+                if (/It's a draw!/.test(result)) {console.log("No points for either side")};
+            console.log("The score is " + playerScore + " to " + computerScore);
         const Game2 = prompt("Round two!");
-        console.log(playRound(Game2));
+        let result2 = (playRound(Game2));
+            console.log(result2)
+                if (/You win!/.test(result2)) {++playerScore};
+                if (/You lose!/.test(result2)) {++computerScore};
+                if (/It's a draw!/.test(result2)) {console.log("No points for either side")};
+            console.log("The score is " + playerScore + " to " + computerScore);
         const Game3 = prompt("Round three!");
-        console.log(playRound(Game3));
+        let result3 = (playRound(Game3));
+            console.log(result3)
+                if (/You win!/.test(result3)) {++playerScore};
+                if (/You lose!/.test(result3)) {++computerScore};
+                if (/It's a draw!/.test(result3)) {console.log("No points for either side")};
+            console.log("The score is " + playerScore + " to " + computerScore);
         const Game4 = prompt("Round four!");
-        console.log(playRound(Game4));
+        let result4 = (playRound(Game4));
+            console.log(result4)
+                if (/You win!/.test(result4)) {++playerScore};
+                if (/You lose!/.test(result4)) {++computerScore};
+                if (/It's a draw!/.test(result4)) {console.log("No points for either side")};
+            console.log("The score is " + playerScore + " to " + computerScore);
         const Game5 = prompt("Final round!");
-        console.log(playRound(Game5));
+        let result5 = (playRound(Game5));
+            console.log(result5)
+                if (/You win!/.test(result5)) {++playerScore};
+                if (/You lose!/.test(result5)) {++computerScore};
+                if (/It's a draw!/.test(result5)) {console.log("No points for either side")};
+            console.log("The score is " + playerScore + " to " + computerScore);
+        if (playerScore > computerScore) {console.log("Congratulations! You've won")};
+        if (computerScore > playerScore) {console.log("Sorry! You lose")};
+        if (playerScore == computerScore) {console.log("It's a draw! play again?")};
     }
