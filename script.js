@@ -1,8 +1,7 @@
 const selection = ['Rock', 'Paper', 'Scissors'];
 
 function getComputerChoice() {
-    const computer = selection[Math.floor(Math.random() * selection.length)];
-    return computer
+    return selection[Math.floor(Math.random() * selection.length)];
 }
 
 function playRound(playerSelection) {
