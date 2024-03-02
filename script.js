@@ -26,3 +26,25 @@ function playRound(playerSelection) {
 
     return resultText;
 }
+
+function playGame(playerSelection) {
+    const resultText = playRound(playerSelection);
+    updateScores();
+    checkWin(resultText);
+}
+
+function updateScores() {
+    resultsScore.textContent = `Player: ${playerScore} - Computer: ${computerScore}`;
+}
+
+function checkWin(resultText) {
+    if (playerScore === 5 || computerScore === 5) {
+        const message = playerScore === 5 ? "Congratulations! You won the game!" : "You lost! Better luck next time!";
+        resultsFlavor.textContent = message;
+        rockButton.disabled = true;
+        paperButton.disabled = true;
+        scissorsButton.disabled = true;
+    } else {
+        resultsFlavor.textContent = resultText;
+    }
+}
