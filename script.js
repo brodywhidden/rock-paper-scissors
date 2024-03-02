@@ -1,13 +1,13 @@
 const selection = ['Rock', 'Paper', 'Scissors'];
-let playerScore = 0
-let computerScore = 0
+let playerScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     return selection[Math.floor(Math.random() * selection.length)];
 }
 
 function playRound(playerSelection) {
-    const computer = getComputerChoice()
+    const computer = getComputerChoice();
     let resultText;
 
     if (playerSelection === computer) {
@@ -48,3 +48,14 @@ function checkWin(resultText) {
         resultsFlavor.textContent = resultText;
     }
 }
+
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+
+const resultsFlavor = document.querySelector('#results');
+const resultsScore = document.querySelector('#playerScore');
+
+rockButton.addEventListener('click', () => playGame('Rock'));
+paperButton.addEventListener('click', () => playGame('Paper'));
+scissorsButton.addEventListener('click', () => playGame('Scissors'));
